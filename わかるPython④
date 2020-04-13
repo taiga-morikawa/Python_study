@@ -1,0 +1,80 @@
+price = [100,120,150]#for文
+for p in price:
+  print(p)
+100
+120
+150
+
+price = [100,120,150]#3割引
+for p in price:
+  print(p * 0.7)
+70.0
+84.0
+105.0
+
+price = [100,120,150]#整数で表す時はint
+for p in price:
+  print(int(p * 0.65))
+65
+78
+97
+
+123 * 45 > 5000#比較演算子
+True
+
+678 * 90 <= 6000
+False
+
+1 * 2 * 3 * 4 * 5 == 120 
+True
+
+temp = 18#if文
+if temp < 20:
+  print("heater")
+heater
+
+temp = 24#20未満の場合、heaterと表示
+if temp < 20:
+  print("heater")
+
+temp = 18#else
+if temp < 20:
+  print("heater")
+else:
+  print("stop")
+heater
+
+temp = 24#20℃未満の場合、heater、それ以外、stop
+if temp <20:
+  print("heater")
+else:
+  print("stop")
+stop
+
+temp = 18#elif
+if temp < 20:
+  print("heater")
+elif temp >= 30:
+  print("cooler")
+else:
+  print("stop")
+heater
+
+temp = 24
+if temp < 20:
+  print("heater")
+elif temp >= 30:
+  print("cooler")
+else:
+  print("stop")
+stop
+
+temp = 31
+if temp < 20:
+  print("heater")
+elif temp >= 30:
+  print("cooler")
+else:
+  print("stop")
+cooler  
+  

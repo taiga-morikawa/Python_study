@@ -1,0 +1,41 @@
+def trip(dist,speed):#関数の定義#関数を定義する場合は「def」を使用する
+  time = dist / speed
+  return time
+
+trip(140,80)#再度定義する必要はない
+1.75
+
+trip(15,4)
+3.75
+
+trip(140,80) + trip(15,4)
+5.5
+
+def trip(dist,speed):#ドキュメンテーション文字列#他の人に使ってもらう時など便利
+  """距離と速度から所要時間を計算して返します.
+
+  引数:
+  dist -- 距離
+  speed -- 速度
+  """
+  time = dist / speed
+  return time
+
+help(trip)#help関数
+Help on function trip in module __main__:
+
+trip(dist, speed)
+    距離と速度から所要時間を計算して返します.
+    
+    引数:
+    dist -- 距離
+    speed -- 速度
+    
+def sum(n):#sum関数を定義
+  if n > 0:#nが0より大きいときの処理
+    return n + sum(n - 1)#n + sum(n-1)を返す
+  return 0#0を返す
+
+sum(10)#1から10ｍでの合計値
+55
+

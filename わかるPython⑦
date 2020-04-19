@@ -1,0 +1,43 @@
+
+def lunch(main, side, drink):#位置引数
+  print("main :", main)
+  print("side :", side)
+  print("drink :", drink)
+  
+lunch("beef", "soup", "coffee")
+main : beef
+side : soup
+drink : coffee
+
+lunch(side = "soup", drink = "coffee", main = "beef")
+main : beef
+side : soup
+drink : coffee
+
+lunch(drink = "coffee", main = "beef", side = "soup")#キーワード引数
+main : beef
+side : soup
+drink : coffee
+
+lunch("beef", drink = "coffee", side = "soup")#位置引数とキーワード引数の混合
+main : beef
+side : soup
+drink : coffee
+
+def lunch(main = "beef", side = "soup", drink = "coffee"):#lunch関数の定義
+  print("main :", main)
+  print("side :", side)
+  print("drink :", drink)
+  
+lunch("fish", "salad")
+main : fish
+side : salad
+drink : coffee
+
+lunch(drink = "coffee")
+main : beef
+side : soup
+drink : coffee
+
+list(map(lambda x: x*x, [1,2,3,4,5]))#ラムダ式
+[1, 4, 9, 16, 25]

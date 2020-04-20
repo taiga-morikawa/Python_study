@@ -1,0 +1,44 @@
+def show():#show関数の定義
+  print(pet)#グローバル変数petの表示
+pet = "dog"#グローバル変数pet
+show()#show関数の呼び出し
+dog
+
+def cat():
+  pet = "cat"
+pet = "dog"
+cat()
+print(pet)
+dog
+
+def cat():
+  global pet#global文
+  pet = "cat"
+
+pet = "dog"
+cat()
+print(pet)  
+cat
+
+def dog():
+  def cat():
+    nonlocal pet#nonlocal文
+    pet = "cat"
+
+  pet = "dog"
+  cat()
+  print(pet)
+
+dog()
+cat
+
+def dog():
+  def cat():
+    pet = "cat"
+
+  pet = "dog"
+  cat()
+  print(pet)
+
+dog() 
+dog

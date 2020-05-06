@@ -1,0 +1,98 @@
+zoo = {"lion", "tiger", "elephant", "giraffe"}
+zoo
+{'elephant', 'giraffe', 'lion', 'tiger'}
+
+"elephant" in zoo
+True
+
+"panda" not in zoo
+True
+
+zoo |= {"snake"}#|=演算子
+zoo
+{'elephant', 'giraffe', 'lion', 'snake', 'tiger'}
+
+zoo |= {"lion"}
+zoo
+{'elephant', 'giraffe', 'lion', 'snake', 'tiger'}
+
+zoo -= {"tiger"}
+zoo
+{'elephant', 'giraffe', 'lion', 'snake'}
+
+zoo -= {"koala"}
+zoo
+{'elephant', 'giraffe', 'lion', 'snake'}
+
+zoo1 = {"lion", "tiger", "elephant", "giraffe"}
+zoo2 = {"elephant", "panda", "snake", "lion"}
+
+zoo1 & zoo2
+{'elephant', 'lion'}
+
+zoo1 | zoo2
+{'elephant', 'giraffe', 'lion', 'panda', 'snake', 'tiger'}
+
+zoo1 - zoo2
+{'giraffe', 'tiger'}
+
+zoo1 ^ zoo2
+{'giraffe', 'panda', 'snake', 'tiger'}
+
+topping = {"bacon":210, "mushroom":140, "onion":100, "tomato":130}#辞書の作成
+topping
+{'bacon': 210, 'mushroom': 140, 'onion': 100, 'tomato': 130}
+
+topping["mushroom"]
+140
+
+for key in topping:
+  print(key)
+bacon
+mushroom
+onion
+tomato
+
+for key, value in topping.items():#ペアで取り出し
+  print(key,value)
+bacon 210
+mushroom 140
+onion 100
+tomato 130
+
+topping["cheese"] = 160#要素の追加
+topping
+{'bacon': 210, 'cheese': 160, 'mushroom': 140, 'onion': 100, 'tomato': 130}
+
+topping["tomato"] = 150#要素の変更
+topping
+{'bacon': 210, 'cheese': 160, 'mushroom': 140, 'onion': 100, 'tomato': 150}
+
+del topping["bacon"]#要素の削除
+topping
+{'cheese': 160, 'mushroom': 140, 'onion': 100, 'tomato': 150}
+
+def test(**x):
+  print(x)
+
+test(a=4, b=5)
+{'a': 4, 'b': 5}
+
+test(a=4, b=5, c=6)
+{'a': 4, 'b': 5, 'c': 6}
+
+def test2(*x, **y):
+  print(x)
+  print(y)
+
+test2(1, 2, 3)
+(1, 2, 3)
+{}
+
+test2(a=4, b=5, c=6)
+()
+{'a': 4, 'b': 5, 'c': 6}
+
+test2(1, 2, 3, a=4, b=5, c=6)
+(1, 2, 3)
+{'a': 4, 'b': 5, 'c': 6}

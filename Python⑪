@@ -1,0 +1,95 @@
+a = []
+for x in range(1, 10):
+  a.append(x ** 2)
+a
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+[x ** 2 for x in range(1, 10)]#内包表記
+[1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+[x ** 3 for x in range(1, 10)]
+[1, 8, 27, 64, 125, 216, 343, 512, 729]
+
+[x for x in range(1, 10) if x % 3 == 0]#内包表記とif
+[3, 6, 9]
+
+x = 2
+"Fizz" if x % 3 == 0 else x
+2
+
+x = 3
+"Fizz" if x % 3 == 0 else x
+'Fizz'
+
+["Fizz" if x % 3 == 0 else x for x in range(1, 10)]
+[1, 2, 'Fizz', 4, 5, 'Fizz', 7, 8, 'Fizz']
+
+number = (x for x in range(10))#ジェネレータ式
+for n in number:
+  print(n)
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+
+def do_return():
+  return 1
+  return 2
+  return"Fizz"
+  return 4
+  return"Fizz"
+
+do_return()
+1
+
+do_return()
+1
+
+do_return()
+1
+
+do_return()
+1
+
+do_return()
+1
+
+def do_yield():#yield文
+  yield 1
+  yield 2
+  yield "Fizz"
+  yield 4
+  yield "Fizz"
+
+do_yield()
+<generator object do_yield at 0x7f0a17d5fe60>
+
+for i in do_yield():
+  print(i)
+1
+2
+Fizz
+4
+Fizz
+
+list(do_yield())
+[1, 2, 'Fizz', 4, 'Fizz']
+
+def fizzbuzz(n):#FizzBuzzゲーム
+  for x in range(1, n):
+    if x % 15 == 0:
+      yield "FizzBuzz"
+    elif x % 5 == 0:
+      yield "Buzz"
+    elif x % 3 == 0:
+      yield "Fizz"
+    else:
+      yield x
+print(list(fizzbuzz(16)))
+[1, 2, 'Fizz', 4, 'Buzz', 'Fizz', 7, 8, 'Fizz', 'Buzz', 11, 'Fizz', 13, 14, 'FizzBuzz']
